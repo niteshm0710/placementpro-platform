@@ -1,0 +1,81 @@
+{
+  "theme": "light",
+  "archetype": "4",
+  "archetype_name": "Swiss & High-Contrast",
+  "color_palette": {
+    "background": "#FFFFFF",
+    "surface": "#F4F4F5",
+    "surface_glass": "rgba(255, 255, 255, 0.7)",
+    "primary": "#002fa7",
+    "accent_warning": "#FF3B30",
+    "text_primary": "#0A0A0A",
+    "text_secondary": "#52525B",
+    "border": "#E4E4E7"
+  },
+  "typography": {
+    "headings_font": "Cabinet Grotesk, sans-serif",
+    "body_font": "IBM Plex Sans, sans-serif",
+    "weights": {
+      "light": 300,
+      "regular": 400,
+      "semibold": 600,
+      "black": 900
+    },
+    "scale": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-none",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight leading-none",
+      "h3": "text-xl sm:text-2xl tracking-tight",
+      "h4": "text-lg sm:text-xl",
+      "body": "text-base leading-relaxed",
+      "overline": "text-xs uppercase tracking-[0.2em] font-semibold"
+    }
+  },
+  "layout_and_spacing": {
+    "generous_spacing": "Use p-6 to p-12 for containers, py-20 to py-32 for sections.",
+    "landing_grid": "MODE A: The 'Tetris' Grid. Use grid-cols-1 md:grid-cols-8 lg:grid-cols-12 with gap-8 to gap-12.",
+    "dashboard_grid": "MODE B: The 'Control Room' Grid. grid-cols-1 md:grid-cols-3 lg:grid-cols-4 with gap-4 or gap-6.",
+    "card_style": "Flat background, 1px subtle border (border-border), no shadow by default. Hover: slight lift (-translate-y-1), subtle shadow (shadow-lg).",
+    "glassmorphism": "For sticky headers: bg-white/70, backdrop-blur-xl, border-b border-white/40."
+  },
+  "components": {
+    "navigation": "Sticky header with glassmorphism for landing page. Solid sidebar/header for dashboards.",
+    "cards": "Cardless or sharp rectangular edges. Minimal border radius (rounded-none or max rounded-md).",
+    "forms": "Shadcn components heavily customized to match the Swiss design (flat inputs, bold labels, 1px borders).",
+    "tables": "Shadcn tables with strong readability, generous row spacing, and status colors (red/green/neutral).",
+    "charts": "Shadcn/Recharts line and bar charts. Avoid complex visualizations. Keep calm and whitespace-heavy layouts.",
+    "testing": "All interactive elements MUST include data-testid (e.g., data-testid='login-submit-button')."
+  },
+  "image_urls": [
+    {
+      "url": "https://images.unsplash.com/photo-1664273891579-22f28332f3c4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwY2FtcHVzJTIwbW9kZXJufGVufDB8fHx8MTc3ODgyMjg0MHww&ixlib=rb-4.1.0&q=85",
+      "category": "hero_background",
+      "description": "Modern university campus building, use as hero section background on landing page."
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwc3R1ZGVudCUyMGxhcHRvcHxlbnwwfHx8fDE3Nzg4MjI4NDB8MA&ixlib=rb-4.1.0&q=85",
+      "category": "student_feature",
+      "description": "Student sitting in front of laptop, use for Student feature section or dashboard."
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1758520144426-edf40a58f299?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHwyfHxqb2IlMjBpbnRlcnZpZXclMjBvZmZpY2V8ZW58MHx8fHwxNzc4ODIyODQwfDA&ixlib=rb-4.1.0&q=85",
+      "category": "interview_feature",
+      "description": "Professionals discussing in an office, use for Mock Interview or TPO feature section."
+    }
+  ],
+  "motion_and_interactions": {
+    "hover_states": "Always explicitly set text color on hover. Active state color must have a lighter hue of hover state.",
+    "focus_states": "Higher contrast than default state. focus:ring-2 focus:ring-primary focus:ring-offset-2.",
+    "transitions": "Specific properties only. e.g., transition-transform duration-200 ease-out."
+  },
+  "instructions_to_main_agent": [
+    "Ensure 'Made with Emergent' branding is completely removed from all pages.",
+    "Install and use 'lucide-react' for all icons.",
+    "Use Shadcn UI for all interactive components. Do not use raw HTML for select, inputs, dialogs, tabs.",
+    "Implement Role-Based Access Control (Student, HOD, TPO) with JWT-like behavior using DEMO AI responses.",
+    "Landing page should be visually distinct from the dashboard, using the Tetris Grid bento layouts.",
+    "Dashboard must utilize the Control Room grid pattern with dense information architecture.",
+    "Include 'data-testid' attributes on ALL clickable buttons, form inputs, links, and key metric displays.",
+    "Do not use emojis anywhere in the UI. Keep it strictly professional.",
+    "For the ATS score and readiness visualizer, use Shadcn Charts or Recharts (gauge/radial/donut chart)."
+  ]
+}
